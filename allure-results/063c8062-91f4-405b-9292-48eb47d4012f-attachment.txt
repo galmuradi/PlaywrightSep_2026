@@ -1,0 +1,5 @@
+testuser
+===== START SCREENSHOT =====
+Folder exists: true
+===== SCREENSHOT CREATED =====
+C:\Play_Test\screenshot\Login\facebook.png
