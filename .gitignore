@@ -3,7 +3,7 @@ ms-playwright/
 test-results/
 allure-history/
 
-allure-results/
+
 .env
 readme.md
 
