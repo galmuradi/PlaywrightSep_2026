@@ -1,0 +1,66 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: UploadFile.spec.js >> Debug upload
+- Location: tests\UploadFile.spec.js:3:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: ENOENT: no such file or directory, stat 'C:\Play_Test\Playwright command lines.docx'
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - link "Fork me on GitHub":
+      - /url: https://github.com/tourdedave/the-internet
+      - img "Fork me on GitHub" [ref=e5] [cursor=pointer]
+    - generic [ref=e7]:
+      - heading "File Uploader" [level=3] [ref=e8]
+      - paragraph [ref=e9]: Choose a file on your system and then click upload. Or, drag and drop a file into the area below.
+      - generic [ref=e10]:
+        - button "Choose File" [ref=e11]
+        - button "Upload" [ref=e12] [cursor=pointer]
+  - generic [ref=e15]:
+    - separator [ref=e16]
+    - generic [ref=e17]:
+      - text: Powered by
+      - link "Elemental Selenium" [ref=e18] [cursor=pointer]:
+        - /url: http://elementalselenium.com/
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('@playwright/test');
+  2  | 
+  3  | test('Debug upload', async ({ page }) => {
+  4  |   await page.goto('https://the-internet.herokuapp.com/upload');
+  5  | 
+  6  |   console.log("Page loaded");
+  7  | 
+> 8  |   await page.locator('#file-upload')
+     |   ^ Error: ENOENT: no such file or directory, stat 'C:\Play_Test\Playwright command lines.docx'
+  9  |     .setInputFiles('C:\\Play_Test\\Playwright command lines.docx');
+  10 | 
+  11 |   console.log("File attached");
+  12 | 
+  13 |   await page.locator('#file-submit').click();
+  14 | 
+  15 |   console.log("Submit clicked");
+  16 | 
+  17 |   await expect(page.locator('h3')).toHaveText('File Uploaded!');
+  18 | });
+```

@@ -1,0 +1,996 @@
+<testsuites id="" name="" tests="42" failures="1" skipped="3" errors="14" time="89.780664">
+<testsuite name="AllureScreenshot.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="1" skipped="0" time="8.937" errors="0">
+<testcase name="Allure screenshot test" classname="AllureScreenshot.spec.js" time="8.937">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\AllureScreenshot-Allure-screenshot-test-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\AllureScreenshot-Allure-screenshot-test-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\AllureScreenshot-Allure-screenshot-test-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveTitle(expected) failed" type="expect.toHaveTitle">
+<![CDATA[  [chromium] › AllureScreenshot.spec.js:3:1 › Allure screenshot test ───────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected: "This title is intentionally wrong"
+    Received: "Google"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        13 × locator resolved to <html lang="nl" itemscope="" itemtype="http://schema.org/WebPage">…</html>
+           - unexpected value "Google"
+
+
+       5 |
+       6 |     try {
+    >  7 |         await expect(page).toHaveTitle('This title is intentionally wrong');
+         |                            ^
+       8 |     } catch (error) {
+       9 |
+      10 |         const screenshot = await page.screenshot();
+        at C:\Play_Test\tests\AllureScreenshot.spec.js:7:28
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\AllureScreenshot-Allure-screenshot-test-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\AllureScreenshot-Allure-screenshot-test-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\AllureScreenshot-Allure-screenshot-test-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\AllureScreenshot-Allure-screenshot-test-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="Alret.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="2" failures="0" skipped="0" time="9.088" errors="0">
+<testcase name="Handle the Alret successfuly" classname="Alret.spec.js" time="4.351">
+</testcase>
+<testcase name="Handle the Alert successfully" classname="Alret.spec.js" time="4.737">
+<system-out>
+<![CDATA[The type of Alert message: I am a JS Alert
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="AlretConfirm.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="2" failures="0" skipped="0" time="37.244" errors="1">
+<testcase name="Handle Confirm Alert - Accept" classname="AlretConfirm.spec.js" time="4.439">
+<system-out>
+<![CDATA[Confirm message: I am a JS Confirm
+]]>
+</system-out>
+</testcase>
+<testcase name="Handle Confirm Alert - Cancel" classname="AlretConfirm.spec.js" time="32.805">
+<system-out>
+<![CDATA[Confirm message: I am a JS Confirm
+
+[[ATTACHMENT|test-results\AlretConfirm-Handle-Confirm-Alert---Cancel-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\AlretConfirm-Handle-Confirm-Alert---Cancel-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\AlretConfirm-Handle-Confirm-Alert---Cancel-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › AlretConfirm.spec.js:21:1 › Handle Confirm Alert - Cancel ───────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\AlretConfirm-Handle-Confirm-Alert---Cancel-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\AlretConfirm-Handle-Confirm-Alert---Cancel-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\AlretConfirm-Handle-Confirm-Alert---Cancel-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\AlretConfirm-Handle-Confirm-Alert---Cancel-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="AlretPrompt.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="2" failures="0" skipped="0" time="34.19" errors="1">
+<testcase name="Handle Prompt Alert - Enter text and Accept" classname="AlretPrompt.spec.js" time="4.694">
+<system-out>
+<![CDATA[Prompt message: I am a JS prompt
+]]>
+</system-out>
+</testcase>
+<testcase name="Handle Prompt Alert - Cancel" classname="AlretPrompt.spec.js" time="29.496">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\AlretPrompt-Handle-Prompt-Alert---Cancel-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\AlretPrompt-Handle-Prompt-Alert---Cancel-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › AlretPrompt.spec.js:20:1 › Handle Prompt Alert - Cancel ─────────────────────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://the-internet.herokuapp.com/javascript_alerts", waiting until "load"
+
+
+      20 | test('Handle Prompt Alert - Cancel', async ({ page }) => {
+      21 |
+    > 22 |     await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
+         |                ^
+      23 |
+      24 |     // Handle the prompt dialog
+      25 |     page.once('dialog', async dialog => {
+        at C:\Play_Test\tests\AlretPrompt.spec.js:22:16
+
+    Error Context: ..\test-results\AlretPrompt-Handle-Prompt-Alert---Cancel-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\AlretPrompt-Handle-Prompt-Alert---Cancel-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\AlretPrompt-Handle-Prompt-Alert---Cancel-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Autocomplete.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="31.143" errors="1">
+<testcase name="Handle Autocomplete using keyboard" classname="Autocomplete.spec.js" time="31.143">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Autocomplete-Handle-Autocomplete-using-keyboard-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Autocomplete-Handle-Autocomplete-using-keyboard-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Autocomplete-Handle-Autocomplete-using-keyboard-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › Autocomplete.spec.js:4:1 › Handle Autocomplete using keyboard ───────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('combobox', { name: 'Search' })
+
+
+      10 |
+      11 |     // Type text
+    > 12 |     await searchBox.fill('playwright');
+         |                     ^
+      13 |
+      14 |     // Wait for autocomplete suggestions to appear
+      15 |     await page.waitForTimeout(1000);
+        at C:\Play_Test\tests\Autocomplete.spec.js:12:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\Autocomplete-Handle-Autocomplete-using-keyboard-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\Autocomplete-Handle-Autocomplete-using-keyboard-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\Autocomplete-Handle-Autocomplete-using-keyboard-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\Autocomplete-Handle-Autocomplete-using-keyboard-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="CheckBox.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="2" failures="0" skipped="0" time="34.242" errors="1">
+<testcase name="Handle checkbox" classname="CheckBox.spec.js" time="4.32">
+</testcase>
+<testcase name="handle single checkbox" classname="CheckBox.spec.js" time="29.922">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\CheckBox-handle-single-checkbox-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\CheckBox-handle-single-checkbox-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.check: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › CheckBox.spec.js:24:5 › handle single checkbox ──────────────────────────────────────
+
+    Error: locator.check: Target page, context or browser has been closed
+    Call log:
+      - waiting for getByRole('checkbox', { name: 'Subscribe' })
+
+
+      27 |   // Locate by accessible role and check
+      28 |   const subscribeCheckbox = page.getByRole('checkbox', { name: 'Subscribe' });
+    > 29 |   await subscribeCheckbox.check();
+         |                           ^
+      30 |
+      31 |   // Verify the checkbox is checked
+      32 |   await expect(subscribeCheckbox).toBeChecked();
+        at C:\Play_Test\tests\CheckBox.spec.js:29:27
+
+    Error Context: ..\test-results\CheckBox-handle-single-checkbox-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CheckBox-handle-single-checkbox-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CheckBox-handle-single-checkbox-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dropdownlist.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.158" errors="0">
+<testcase name="native dropdown examples" classname="Dropdownlist.spec.js" time="4.158">
+</testcase>
+</testsuite>
+<testsuite name="example.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="2" failures="0" skipped="0" time="5.301" errors="0">
+<testcase name="has title" classname="example.spec.js" time="2.542">
+</testcase>
+<testcase name="get started link" classname="example.spec.js" time="2.759">
+</testcase>
+</testsuite>
+<testsuite name="Frame.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.217" errors="0">
+<testcase name="Get first frame" classname="Frame.spec.js" time="5.217">
+<system-out>
+<![CDATA[Total frames: [33m4[39m
+First frame URL: https://docs.oracle.com/javase/8/docs/api/overview-frame.html
+Second frame URL: https://docs.oracle.com/javase/8/docs/api/allclasses-frame.html
+Third frame URL: https://docs.oracle.com/javase/8/docs/api/overview-summary.html
+First frame text: Java™ Platform
+Standard Ed. 8
+All ClassesAll Profiles
+Packages
+java.applet
+java.awt
+java.awt.color
+java.awt.datatransfer
+java.awt.dnd
+java.awt.event
+java.awt.font
+java.awt.geom
+java.awt.im
+java.awt.im.spi
+java.awt.image
+java.awt.image.renderable
+java.awt.print
+java.beans
+java.beans.beancontext
+java.io
+java.lang
+java.lang.annotation
+java.lang.instrument
+java.lang.invoke
+java.lang.management
+java.lang.ref
+java.lang.reflect
+java.math
+java.net
+java.nio
+java.nio.channels
+java.nio.channels.spi
+java.nio.charset
+java.nio.charset.spi
+java.nio.file
+java.nio.file.attribute
+java.nio.file.spi
+java.rmi
+java.rmi.activation
+java.rmi.dgc
+java.rmi.registry
+java.rmi.server
+java.security
+java.security.acl
+java.security.cert
+java.security.interfaces
+java.security.spec
+java.sql
+java.text
+java.text.spi
+java.time
+java.time.chrono
+java.time.format
+java.time.temporal
+java.time.zone
+java.util
+java.util.concurrent
+java.util.concurrent.atomic
+java.util.concurrent.locks
+java.util.function
+java.util.jar
+java.util.logging
+java.util.prefs
+java.util.regex
+java.util.spi
+java.util.stream
+java.util.zip
+javax.accessibility
+javax.activation
+javax.activity
+javax.annotation
+javax.annotation.processing
+javax.crypto
+javax.crypto.interfaces
+javax.crypto.spec
+javax.imageio
+javax.imageio.event
+javax.imageio.metadata
+javax.imageio.plugins.bmp
+javax.imageio.plugins.jpeg
+javax.imageio.spi
+javax.imageio.stream
+javax.jws
+javax.jws.soap
+javax.lang.model
+javax.lang.model.element
+javax.lang.model.type
+javax.lang.model.util
+javax.management
+javax.management.loading
+javax.management.modelmbean
+javax.management.monitor
+javax.management.openmbean
+javax.management.relation
+javax.management.remote
+javax.management.remote.rmi
+javax.management.timer
+javax.naming
+javax.naming.directory
+javax.naming.event
+javax.naming.ldap
+javax.naming.spi
+javax.net
+javax.net.ssl
+javax.print
+javax.print.attribute
+javax.print.attribute.standard
+javax.print.event
+javax.rmi
+javax.rmi.CORBA
+javax.rmi.ssl
+javax.script
+javax.security.auth
+javax.security.auth.callback
+javax.security.auth.kerberos
+javax.security.auth.login
+javax.security.auth.spi
+javax.security.auth.x500
+javax.security.cert
+javax.security.sasl
+javax.sound.midi
+javax.sound.midi.spi
+javax.sound.sampled
+javax.sound.sampled.spi
+javax.sql
+javax.sql.rowset
+javax.sql.rowset.serial
+javax.sql.rowset.spi
+javax.swing
+javax.swing.border
+javax.swing.colorchooser
+javax.swing.event
+javax.swing.filechooser
+javax.swing.plaf
+javax.swing.plaf.basic
+javax.swing.plaf.metal
+javax.swing.plaf.multi
+javax.swing.plaf.nimbus
+javax.swing.plaf.synth
+javax.swing.table
+javax.swing.text
+javax.swing.text.html
+javax.swing.text.html.parser
+javax.swing.text.rtf
+javax.swing.tree
+javax.swing.undo
+javax.tools
+javax.transaction
+javax.transaction.xa
+javax.xml
+javax.xml.bind
+javax.xml.bind.annotation
+javax.xml.bind.annotation.adapters
+javax.xml.bind.attachment
+javax.xml.bind.helpers
+javax.xml.bind.util
+javax.xml.crypto
+javax.xml.crypto.dom
+javax.xml.crypto.dsig
+javax.xml.crypto.dsig.dom
+javax.xml.crypto.dsig.keyinfo
+javax.xml.crypto.dsig.spec
+javax.xml.datatype
+javax.xml.namespace
+javax.xml.parsers
+javax.xml.soap
+javax.xml.stream
+javax.xml.stream.events
+javax.xml.stream.util
+javax.xml.transform
+javax.xml.transform.dom
+javax.xml.transform.sax
+javax.xml.transform.stax
+javax.xml.transform.stream
+javax.xml.validation
+javax.xml.ws
+javax.xml.ws.handler
+javax.xml.ws.handler.soap
+javax.xml.ws.http
+javax.xml.ws.soap
+javax.xml.ws.spi
+javax.xml.ws.spi.http
+javax.xml.ws.wsaddressing
+javax.xml.xpath
+org.ietf.jgss
+org.omg.CORBA
+org.omg.CORBA_2_3
+org.omg.CORBA_2_3.portable
+org.omg.CORBA.DynAnyPackage
+org.omg.CORBA.ORBPackage
+org.omg.CORBA.portable
+org.omg.CORBA.TypeCodePackage
+org.omg.CosNaming
+org.omg.CosNaming.NamingContextExtPackage
+org.omg.CosNaming.NamingContextPackage
+org.omg.Dynamic
+org.omg.DynamicAny
+org.omg.DynamicAny.DynAnyFactoryPackage
+org.omg.DynamicAny.DynAnyPackage
+org.omg.IOP
+org.omg.IOP.CodecFactoryPackage
+org.omg.IOP.CodecPackage
+org.omg.Messaging
+org.omg.PortableInterceptor
+org.omg.PortableInterceptor.ORBInitInfoPackage
+org.omg.PortableServer
+org.omg.PortableServer.CurrentPackage
+org.omg.PortableServer.POAManagerPackage
+org.omg.PortableServer.POAPackage
+org.omg.PortableServer.portable
+org.omg.PortableServer.ServantLocatorPackage
+org.omg.SendingContext
+org.omg.stub.java.rmi
+org.w3c.dom
+org.w3c.dom.bootstrap
+org.w3c.dom.events
+org.w3c.dom.ls
+org.w3c.dom.views
+org.xml.sax
+org.xml.sax.ext
+org.xml.sax.helpers
+
+ 
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="generated.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.511" errors="1">
+<testcase name="Handle input box" classname="generated.spec.js" time="19.511">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\generated-Handle-input-box-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\generated-Handle-input-box-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › generated.spec.js:3:1 › Handle input box ────────────────────────────────────────────
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for getByRole('combobox', { name: 'Search' })
+
+
+      3 | test('Handle input box', async ({ page }) => {
+      4 |   await page.goto('https://www.google.com/');
+    > 5 |   await page.getByRole('combobox', { name: 'Search' }).click();
+        |                                                        ^
+      6 |   await page.getByRole('combobox', { name: 'Search' }).fill('ghassan');
+      7 |
+      8 |   // No need to close page, context, or browser.
+        at C:\Play_Test\tests\generated.spec.js:5:56
+
+    Error Context: ..\test-results\generated-Handle-input-box-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\generated-Handle-input-box-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\generated-Handle-input-box-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="InputBox.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.467" errors="0">
+<testcase name="Handle input box" classname="InputBox.spec.js" time="2.467">
+</testcase>
+</testsuite>
+<testsuite name="Json_DataDriven.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="3" failures="0" skipped="0" time="11.954" errors="1">
+<testcase name="Data-driven login tests › Login with username Admin" classname="Json_DataDriven.spec.js" time="6.066">
+</testcase>
+<testcase name="Data-driven login tests › Login with username Sam" classname="Json_DataDriven.spec.js" time="4.264">
+</testcase>
+<testcase name="Data-driven login tests › Login with username Preston" classname="Json_DataDriven.spec.js" time="1.624">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Json_DataDriven-Data-drive-0e346-Login-with-username-Preston-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Json_DataDriven-Data-drive-0e346-Login-with-username-Preston-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › Json_DataDriven.spec.js:9:5 › Data-driven login tests › Login with username Preston ─
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+
+       9 |     test(`Login with username ${data.username}`, async ({ page }) => {
+      10 |         
+    > 11 |       await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+         |                  ^
+      12 |
+      13 |       await page.getByPlaceholder('Username').fill(data.username);
+      14 |       await page.getByPlaceholder('Password').fill(data.password);
+        at C:\Play_Test\tests\Json_DataDriven.spec.js:11:18
+
+    Error Context: ..\test-results\Json_DataDriven-Data-drive-0e346-Login-with-username-Preston-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\Json_DataDriven-Data-drive-0e346-Login-with-username-Preston-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\Json_DataDriven-Data-drive-0e346-Login-with-username-Preston-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Json.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.401" errors="1">
+<testcase name="This script is to test the login success" classname="Json.spec.js" time="1.401">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Json-This-script-is-to-test-the-login-success-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Json-This-script-is-to-test-the-login-success-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: net::ERR_ABORTED; maybe frame was detached?" type="Error">
+<![CDATA[  [chromium] › Json.spec.js:6:1 › This script is to test the login success ─────────────────────────
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+
+       7 |
+       8 |     const url = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login';
+    >  9 |     await page.goto(url);
+         |                ^
+      10 |
+      11 | //<label>Username</label>	getByLabel('Username')
+      12 | //placeholder="Enter username"	getByPlaceholder('Enter username')
+        at C:\Play_Test\tests\Json.spec.js:9:16
+
+    Error Context: ..\test-results\Json-This-script-is-to-test-the-login-success-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\Json-This-script-is-to-test-the-login-success-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\Json-This-script-is-to-test-the-login-success-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="KeyBoardAction.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.37" errors="1">
+<testcase name="This script is to test the upload file successfully" classname="KeyBoardAction.spec.js" time="1.37">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\KeyBoardAction-This-script-bd3b8-he-upload-file-successfully-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\KeyBoardAction-This-script-bd3b8-he-upload-file-successfully-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › KeyBoardAction.spec.js:3:1 › This script is to test the upload file successfully ────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://www.google.com/", waiting until "load"
+
+
+      3 | test('This script is to test the upload file successfully', async ({ page }) => {
+      4 |
+    > 5 |   await page.goto('https://www.google.com');
+        |              ^
+      6 |
+      7 |   await page.locator("textarea[name='q']").fill("Ghassan");
+      8 |
+        at C:\Play_Test\tests\KeyBoardAction.spec.js:5:14
+
+    Error Context: ..\test-results\KeyBoardAction-This-script-bd3b8-he-upload-file-successfully-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\KeyBoardAction-This-script-bd3b8-he-upload-file-successfully-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\KeyBoardAction-This-script-bd3b8-he-upload-file-successfully-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Locater_getByText.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.823" errors="0">
+<testcase name="Get element by text" classname="Locater_getByText.spec.js" time="4.823">
+</testcase>
+</testsuite>
+<testsuite name="Locaters_getByPlaceholder.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.826" errors="1">
+<testcase name="Demonstrate page.getByPlaceholder() usage" classname="Locaters_getByPlaceholder.spec.js" time="1.826">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Locaters_getByPlaceholder--ed0bb-page-getByPlaceholder-usage-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Locaters_getByPlaceholder--ed0bb-page-getByPlaceholder-usage-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: net::ERR_ABORTED; maybe frame was detached?" type="Error">
+<![CDATA[  [chromium] › Locaters_getByPlaceholder.spec.js:3:5 › Demonstrate page.getByPlaceholder() usage ───
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "https://demo.playwright.dev/todomvc", waiting until "load"
+
+
+      3 | test('Demonstrate page.getByPlaceholder() usage', async ({ page }) => {
+      4 |   // 1. Navigate to a test page containing standard form inputs
+    > 5 |   await page.goto('https://demo.playwright.dev/todomvc');
+        |              ^
+      6 |
+      7 |   // 2. Default: Case-insensitive, substring matching
+      8 |   // Matches an input like <input placeholder="What needs to be done?">
+        at C:\Play_Test\tests\Locaters_getByPlaceholder.spec.js:5:14
+
+    Error Context: ..\test-results\Locaters_getByPlaceholder--ed0bb-page-getByPlaceholder-usage-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\Locaters_getByPlaceholder--ed0bb-page-getByPlaceholder-usage-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\Locaters_getByPlaceholder--ed0bb-page-getByPlaceholder-usage-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Locaters_getByRole.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.874" errors="1">
+<testcase name="Example: Locate button using getByRole locator." classname="Locaters_getByRole.spec.js" time="1.874">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Locaters_getByRole-Example-dc514-on-using-getByRole-locator--chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Locaters_getByRole-Example-dc514-on-using-getByRole-locator--chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: net::ERR_ABORTED; maybe frame was detached?" type="Error">
+<![CDATA[  [chromium] › Locaters_getByRole.spec.js:3:1 › Example: Locate button using getByRole locator. ────
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "https://www.facebook.com/", waiting until "load"
+
+
+      3 | test('Example: Locate button using getByRole locator.', async ({ page }) => {
+      4 |   
+    > 5 |   await page.goto('https://www.facebook.com/');
+        |              ^
+      6 |
+      7 |   //Locate Login button using getByRole
+      8 |   await page.getByRole('button', { name: 'Log in' }).click();
+        at C:\Play_Test\tests\Locaters_getByRole.spec.js:5:14
+
+    Error Context: ..\test-results\Locaters_getByRole-Example-dc514-on-using-getByRole-locator--chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\Locaters_getByRole-Example-dc514-on-using-getByRole-locator--chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\Locaters_getByRole-Example-dc514-on-using-getByRole-locator--chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Locators_getByAltText.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.932" errors="1">
+<testcase name="Locate images using getByAltText" classname="Locators_getByAltText.spec.js" time="1.932">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Locators_getByAltText-Locate-images-using-getByAltText-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Locators_getByAltText-Locate-images-using-getByAltText-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.goto: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › Locators_getByAltText.spec.js:8:5 › Locate images using getByAltText ────────────────
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://playwright.dev/", waiting until "load"
+
+
+       7 |
+       8 | test('Locate images using getByAltText', async ({ page }) => {
+    >  9 |   await page.goto('https://playwright.dev/');
+         |              ^
+      10 |
+      11 |   // Find by exact alt text
+      12 |   await expect(page.getByAltText('Bing')).toBeVisible();
+        at C:\Play_Test\tests\Locators_getByAltText.spec.js:9:14
+
+    Error Context: ..\test-results\Locators_getByAltText-Locate-images-using-getByAltText-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\Locators_getByAltText-Locate-images-using-getByAltText-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\Locators_getByAltText-Locate-images-using-getByAltText-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Locators_getByLabel.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.534" errors="0">
+<testcase name="fill input using getByLabel" classname="Locators_getByLabel.spec.js" time="1.534">
+</testcase>
+</testsuite>
+<testsuite name="Locators_getByTitle.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.787" errors="1">
+<testcase name="getByTitle example" classname="Locators_getByTitle.spec.js" time="0.787">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Locators_getByTitle-getByTitle-example-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Locators_getByTitle-getByTitle-example-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="browserContext.newPage: Target page, context or browser has been closed" type="Error">
+<![CDATA[  [chromium] › Locators_getByTitle.spec.js:3:1 › getByTitle example ────────────────────────────────
+
+    Error: browserContext.newPage: Target page, context or browser has been closed
+
+    Error Context: ..\test-results\Locators_getByTitle-getByTitle-example-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\Locators_getByTitle-getByTitle-example-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\Locators_getByTitle-getByTitle-example-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Login.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.118" errors="0">
+<testcase name="This script is to test the login success" classname="Login.spec.js" time="10.118">
+<system-out>
+<![CDATA[[33m1280[39m
+[33m720[39m
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="LoginApplication.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.662" errors="0">
+<testcase name="This script is to test the login success" classname="LoginApplication.spec.js" time="6.662">
+</testcase>
+</testsuite>
+<testsuite name="MouseHover.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.709" errors="0">
+<testcase name="hover over sign in" classname="MouseHover.spec.js" time="4.709">
+</testcase>
+</testsuite>
+<testsuite name="one.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="30.201" errors="1">
+<testcase name="Handle multiple tabs" classname="one.spec.js" time="30.201">
+<system-out>
+<![CDATA[Tab 1 URL: https://www.google.com/
+Tab 2 URL: https://github.com/
+Working with Tab 1
+
+[[ATTACHMENT|test-results\one-Handle-multiple-tabs-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\one-Handle-multiple-tabs-chromium\test-failed-2.png]]
+
+[[ATTACHMENT|test-results\one-Handle-multiple-tabs-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\one-Handle-multiple-tabs-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › one.spec.js:4:1 › Handle multiple tabs ──────────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test ended.
+    Call log:
+      - waiting for getByRole('combobox', { name: /search/i })
+
+
+      46 |     });
+      47 |
+    > 48 |     await googleSearch.fill('Playwright');
+         |                        ^
+      49 |
+      50 |     console.log('Search entered in Tab 1');
+      51 |
+        at C:\Play_Test\tests\one.spec.js:48:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\one-Handle-multiple-tabs-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\one-Handle-multiple-tabs-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\one-Handle-multiple-tabs-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\one-Handle-multiple-tabs-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\one-Handle-multiple-tabs-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="RadioButton.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.369" errors="0">
+<testcase name="Handle radio button" classname="RadioButton.spec.js" time="5.369">
+</testcase>
+</testsuite>
+<testsuite name="Record.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.495" errors="0">
+<testcase name="test" classname="Record.spec.js" time="11.495">
+</testcase>
+</testsuite>
+<testsuite name="Sample.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="4" failures="0" skipped="3" time="7.348" errors="0">
+<testcase name="my first playwright test" classname="Sample.spec.js" time="7.348">
+<system-out>
+<![CDATA[The url is https://www.facebook.com
+The page title is: Facebook
+]]>
+</system-out>
+</testcase>
+<testcase name="my second playwright test" classname="Sample.spec.js">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="my third playwright test" classname="Sample.spec.js">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="my fourth playwright test" classname="Sample.spec.js">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="Table.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.393" errors="0">
+<testcase name="Get specific value from table" classname="Table.spec.js" time="4.393">
+<system-out>
+<![CDATA[
+1 - Test started
+
+2 - Page loaded
+
+3 - Row found
+
+4 - Locators created
+
+5 - Assert the Name is correct
+This is the cell Name [1] Vega
+
+6 - Assert the Salary is correct
+This is cell Salary [4] 10000
+
+7 - Test passed
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="Tabs.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.005" errors="0">
+<testcase name="Open Facebook in new tab" classname="Tabs.spec.js" time="6.005">
+<system-out>
+<![CDATA[Facebook links found: [33m2[39m
+New tab URL: https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F256655817858291
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="Tages.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="2" failures="0" skipped="0" time="6.469" errors="0">
+<testcase name="Login test" classname="Tages.spec.js" time="3.404">
+</testcase>
+<testcase name="Checkout flow" classname="Tages.spec.js" time="3.065">
+</testcase>
+</testsuite>
+<testsuite name="UploadFile.spec.js" timestamp="2026-10-03T17:56:31.011Z" hostname="chromium" tests="1" failures="0" skipped="0" time="31.88" errors="1">
+<testcase name="Debug upload" classname="UploadFile.spec.js" time="31.88">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\UploadFile-Debug-upload-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\UploadFile-Debug-upload-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\UploadFile-Debug-upload-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › UploadFile.spec.js:3:1 › Debug upload ───────────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://the-internet.herokuapp.com/upload", waiting until "load"
+
+
+      2 |
+      3 | test('Debug upload', async ({ page }) => {
+    > 4 |   await page.goto('https://the-internet.herokuapp.com/upload');
+        |              ^
+      5 |
+      6 |   console.log("Page loaded");
+      7 |
+        at C:\Play_Test\tests\UploadFile.spec.js:4:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\UploadFile-Debug-upload-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\UploadFile-Debug-upload-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\UploadFile-Debug-upload-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\UploadFile-Debug-upload-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>
