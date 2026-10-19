@@ -22,16 +22,21 @@ test('Handle checkbox', async ({page}) => {
 
 
 test('handle single checkbox', async ({ page }) => {
-  await page.goto('https://example.com');
 
-  // Locate by accessible role and check
-  const subscribeCheckbox = page.getByRole('checkbox', { name: 'Subscribe' });
-  await subscribeCheckbox.check();
+  await page.goto('https://practice.expandtesting.com/checkboxes');
+
+  // Locate checkbox by accessible role
+  const checkbox = page.getByRole('checkbox').first();
+
+  // Check the checkbox
+  await checkbox.check();
 
   // Verify the checkbox is checked
-  await expect(subscribeCheckbox).toBeChecked();
+  await expect(checkbox).toBeChecked();
 
-  // Uncheck the element
-  await subscribeCheckbox.uncheck();
-  await expect(subscribeCheckbox).not.toBeChecked();
+  // Uncheck the checkbox
+  await checkbox.uncheck();
+
+  // Verify the checkbox is unchecked
+  await expect(checkbox).not.toBeChecked();
 });

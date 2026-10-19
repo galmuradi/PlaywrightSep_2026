@@ -1,9 +1,25 @@
-node_modules/
-ms-playwright/
-test-results/
-allure-history/
-allure-report/
-allure-results/
+# Node.js dependencies 
+node_modules/ 
+# Playwright browsers and test results 
+ms-playwright/ 
+test-results/ 
+# Playwright HTML reports 
+playwright-report/ 
+# Allure reports and results 
+allure-report/ 
+allure-results/ 
+allure-history/ 
+# Temporary files 
+tmp/ 
+*.tmp 
+# Operating system temporary files
+ .DS_Store 
+Thumbs.db 
+# Microsoft Office temporary files 
+~$*.docx 
+~$*.xlsx 
+~$*.pptx
+# Environment variables and secrets
 .env
-readme.md
-
+.env.*
+!.env.example

@@ -3,30 +3,36 @@
 
 const { test, expect } = require('@playwright/test');
 
-test('Handle the Alret successfuly', async ({ page }) => {
+// -----------------------------
+// Test 1: Accept JS Alert
+// -----------------------------
+test('Handle the Alert successfully', async ({ page }) => {
+  await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
 
-    await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
+  page.once('dialog', async dialog => {
+    console.log('Alert message:', dialog.message());
+    await dialog.accept();   // MUST await
+  });
 
-   // Click the "Click for JS Alert" button 
-   await page.getByRole('button', { name: 'Click for JS Alert' }).click(); 
-   
-   // Verify the result text 
-   await expect(page.locator('#result')) .toHaveText('You successfully clicked an alert');
+  await page.getByRole('button', { name: 'Click for JS Alert' }).click();
 
+  await expect(page.locator('#result'))
+    .toHaveText('You successfully clicked an alert');
 });
 
-test('Handle the Alert successfully', async ({ page }) => { 
-await page.goto('https://the-internet.herokuapp.com/javascript_alerts'); 
+// -----------------------------
+// Test 2: Accept JS Confirm
+// -----------------------------
+test('Handle the Confirm Alert successfully', async ({ page }) => {
+  await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
 
-// Handle the JavaScript alert 
-page.on('dialog', async dialog => { 
-console.log('The type of Alert message:', dialog.message()); 
-await dialog.accept(); }); 
+  page.once('dialog', async dialog => {
+    console.log('Confirm message:', dialog.message());
+    await dialog.accept();   // MUST await
+  });
 
-// Click the "Click for JS Alert" button 
-await page.getByRole('button', { name: 'Click for JS Alert' }).click(); 
+  await page.getByRole('button', { name: 'Click for JS Confirm' }).click();
 
-// Verify the result text 
-await expect(page.locator('#result')) .toHaveText('You successfully clicked an alert'); 
-
+  await expect(page.locator('#result'))
+    .toHaveText('You clicked: Ok');
 });

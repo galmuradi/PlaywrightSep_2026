@@ -6,7 +6,7 @@ test('Debug upload', async ({ page }) => {
   console.log("Page loaded");
 
   await page.locator('#file-upload')
-    .setInputFiles('C:\\Play_Test\\Playwright command lines.docx');
+    .setInputFiles('C:\\AzureDevOpeRepo\\SamRepo_Azure\\Playwright command lines.docx');
 
   console.log("File attached");
 

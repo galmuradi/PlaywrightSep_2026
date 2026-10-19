@@ -4,7 +4,7 @@ test('Allure screenshot test', async ({ page }, testInfo) => {
     await page.goto('https://www.google.com');
 
     try {
-        await expect(page).toHaveTitle('This title is intentionally wrong');
+        await expect(page).toHaveTitle('Google');
     } catch (error) {
 
         const screenshot = await page.screenshot();

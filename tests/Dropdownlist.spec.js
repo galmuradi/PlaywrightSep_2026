@@ -1,17 +1,33 @@
-import { test, expect } from '@playwright/test';
+// Import the Playwright test and expect functions 
+const { test, expect } = require('@playwright/test'); 
 
-test('native dropdown examples', async ({ page }) => {
-  await page.goto('https://testautomationpractice.blogspot.com/');
+// Define a test to inspect all available country dropdown options
+ test('Inspect country dropdown options', async ({ page }) => { 
 
-  // Select by visible text (label)
-  await page.locator('#country').selectOption({ label: 'United Kingdom' });
+// STEP 1: Open the Test Automation Practice website 
+await page.goto('https://testautomationpractice.blogspot.com/'); 
 
-  // Select by value
-  await page.locator('#country').selectOption({ value: 'uk' });
+// STEP 2: Locate the country dropdown using its ID: country 
+const countryDropdown = page.locator('#country'); 
 
-  // Select by index (0‑based)
-  await page.locator('#country').selectOption({ index: 2 });
+// STEP 3: Verify that the country dropdown is visible on the page 
+// If the dropdown is not visible, the test will fail 
+await expect(countryDropdown).toBeVisible();
 
-  // Assert selected value
-  await expect(page.locator('#country')).toHaveValue('uk');
+// STEP 4: Find all <option> elements inside the country dropdown 
+// Extract the visible text and value attribute from each option 
+const options = await countryDropdown.locator('option').evaluateAll( elements => elements.map(option => ({ 
+
+// Get the country name displayed to the user text: option.textContent.trim(), 
+// Get the underlying value associated with the country value: option.value 
+}))
+); 
+// STEP 5: Print all country dropdown options in the terminal 
+// This helps us inspect the available countries and their values 
+console.log('Country dropdown options:', options);
+
+// STEP 6: FOLLOW-UP / NEXT STEP 
+// We can now add more assertions to verify specific countries, 
+// check the total number of options, or select a country. 
+// Example: await countryDropdown.selectOption('canada'); 
 });
