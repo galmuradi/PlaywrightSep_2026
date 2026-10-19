@@ -1,0 +1,141 @@
+cd to the right folder
+
+git init
+
+echo "# AddRepo" >> README.md
+
+git add .
+
+git commit -m "Initial commit"
+
+git branch -M main
+
+git branch
+
+git remote -v
+
+git remote set-url origin https://github.com/galmuradi/AddRepo.git
+
+git push -u origin main
+
+git checkout -b Preston
+
+git branch
+
+Edit the file on the local drive
+
+Make some changes
+
+git add .
+
+git commit -m "Upload the file"
+
+git push -u origin HEAD
+
+
+# 1. Go to your project folder
+cd AddRepo
+
+# 2. Initialize Git
+git init
+
+# 3. Create README
+echo "# AddRepo" >> README.md
+
+# 4. Create the initial version
+git add .
+git commit -m "Initial commit"
+
+# 5. Create main branch
+git branch -M main
+
+# 6. Connect to GitHub
+git remote add origin https://github.com/galmuradi/AddRepo.git
+
+# 7. Verify branch
+git branch
+
+# Expected:
+# * main
+
+# 8. Verify GitHub connection
+git remote -v
+
+# Expected:
+# origin  https://github.com/galmuradi/AddRepo.git (fetch)
+# origin  https://github.com/galmuradi/AddRepo.git (push)
+
+# 9. Push the original version to GitHub
+git push -u origin main
+
+# 10. Create your new branch for the changes
+git checkout -b Preston
+
+# 11. Make your changes to the file locally
+
+# 12. Check your changes
+git status
+
+# 13. Add the changes
+git add .
+
+# 14. Commit the changes
+git commit -m "Upload the file"
+
+# 15. Push the new branch
+git push -u origin HEAD
+
+---------------------------------------------------------------
+cd ProjectName
+
+git clone https://github.com/company/ProjectName.git
+
+cd ProjectName
+
+git branch
+
+git remote -v
+
+git pull origin main
+
+git checkout -b Preston
+
+git branch
+
+# Make your changes locally
+
+git status
+
+git add .
+
+git commit -m "Upload the file"
+
+git push -u origin HEAD
+Azure DevOps version
+You would use:
+cd ProjectName
+
+git clone https://dev.azure.com/CompanyName/ProjectName/_git/ProjectName
+
+cd ProjectName
+
+git branch
+
+git remote -v
+
+git pull origin main
+
+git checkout -b Preston
+
+git branch
+
+# Make your changes locally
+
+git status
+
+git add .
+
+git commit -m "Upload the file"
+
+git push -u origin HEAD
+
