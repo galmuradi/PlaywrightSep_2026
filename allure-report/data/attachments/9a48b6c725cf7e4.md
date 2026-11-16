@@ -1,0 +1,139 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ClickType.spec.js >> Double click example
+- Location: tests\ClickType.spec.js:3:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.dblclick: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('#doubleClickBtn')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - button " Toggle Menu" [ref=e5] [cursor=pointer]:
+      - generic [ref=e6]: 
+      - generic [ref=e7]: Toggle Menu
+    - generic [ref=e8]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /
+        - heading "Codekru" [level=1] [ref=e10]
+        - heading "playground" [level=3] [ref=e11]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "Elements" [ref=e14] [cursor=pointer]:
+            - /url: "#homeSubmenu"
+          - list [ref=e15]:
+            - listitem [ref=e16]:
+              - link "Text Fields" [ref=e17] [cursor=pointer]:
+                - /url: /Elements/TextFields
+            - listitem [ref=e18]:
+              - link "Radio Buttons" [ref=e19] [cursor=pointer]:
+                - /url: /Elements/RadioButtons
+            - listitem [ref=e20]:
+              - link "Checkboxes" [ref=e21] [cursor=pointer]:
+                - /url: /Elements/Checkboxes
+            - listitem [ref=e22]:
+              - link "Buttons" [ref=e23] [cursor=pointer]:
+                - /url: /Elements/Buttons
+            - listitem [ref=e24]:
+              - link "Text Messages" [ref=e25] [cursor=pointer]:
+                - /url: /Elements/TextMessages
+            - listitem [ref=e26]:
+              - link "File Upload And Download" [ref=e27] [cursor=pointer]:
+                - /url: /Elements/Files
+            - listitem [ref=e28]:
+              - link "SVG Elements" [ref=e29] [cursor=pointer]:
+                - /url: /Elements/SVGelemnts
+            - listitem [ref=e30]:
+              - link "Dropdowns" [ref=e31] [cursor=pointer]:
+                - /url: /Elements/Dropdowns
+            - listitem [ref=e32]:
+              - link "Tables" [ref=e33] [cursor=pointer]:
+                - /url: /Elements/Tables
+            - listitem [ref=e34]:
+              - link "Dynamic Components" [ref=e35] [cursor=pointer]:
+                - /url: /Elements/DynamicComponents
+            - listitem [ref=e36]:
+              - link "Links" [ref=e37] [cursor=pointer]:
+                - /url: /Elements/Links
+        - listitem [ref=e38]:
+          - link "Interactions" [ref=e39] [cursor=pointer]:
+            - /url: "#interactionsSubMenu"
+        - listitem [ref=e40]:
+          - link "About" [ref=e41] [cursor=pointer]:
+            - /url: "#"
+      - paragraph [ref=e43]:
+        - text: Copyright © 2026 All rights reserved | Made by
+        - link "codekru.com" [ref=e44] [cursor=pointer]:
+          - /url: https://www.codekru.com
+        - text: and
+        - link "Colorlib.com" [ref=e45] [cursor=pointer]:
+          - /url: https://colorlib.com
+  - generic [ref=e46]:
+    - heading "Buttons" [level=2] [ref=e47]
+    - paragraph [ref=e48]:
+      - text: This is a playground to test your code on various types of buttons( Powered by
+      - link "codekru" [ref=e49] [cursor=pointer]:
+        - /url: https://www.codekru.com
+      - text: 😛 )
+    - paragraph [ref=e50]: Here, we will see
+    - list [ref=e51]:
+      - listitem [ref=e52]: Double click on Button
+      - listitem [ref=e53]: Right click on Button
+      - listitem [ref=e54]: Disabled button
+      - listitem [ref=e55]: Click on button to open a new tab
+    - separator [ref=e56]
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: 1) Double-Click on button
+          - button "Double click on me" [ref=e63] [cursor=pointer]
+        - generic [ref=e64]:
+          - generic [ref=e65]: 2) Right-Click on Button
+          - button "Right click on me" [ref=e68] [cursor=pointer]
+        - generic [ref=e69]:
+          - generic [ref=e70]: 3) Left-Click on Button
+          - button "Left click on me" [ref=e73] [cursor=pointer]
+        - generic [ref=e74]:
+          - generic [ref=e75]: 4) Disabled Button
+          - button "Disabled button" [disabled] [ref=e78]
+        - generic [ref=e79]:
+          - generic [ref=e80]: 5) Color change on hover button
+          - button "Hover on me" [ref=e83] [cursor=pointer]
+        - generic [ref=e84]:
+          - generic [ref=e85]: 6) Click the button to open a link in different window
+          - button "Click me" [ref=e88] [cursor=pointer]
+      - generic [ref=e89]:
+        - generic [ref=e90]: 7) Click the button to open a link in same window
+        - button "Click me" [ref=e93] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1 | const { test, expect } = require('@playwright/test');
+  2 | 
+  3 | test('Double click example', async ({ page }) => {
+  4 |     await page.goto('https://testkru.com/Elements/Buttons');
+  5 | 
+> 6 |     await page.locator('#doubleClickBtn').dblclick();
+    |                                           ^ Error: locator.dblclick: Test timeout of 30000ms exceeded.
+  7 | });
+```

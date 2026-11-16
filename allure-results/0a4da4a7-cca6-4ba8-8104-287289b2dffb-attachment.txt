@@ -1,0 +1,2 @@
+Pop-up did not appear, proceeding safely.
+Main test flow continued successfully.
